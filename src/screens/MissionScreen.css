@@ -1,0 +1,50 @@
+.mission{
+
+    width:100vw;
+    height:100vh;
+
+    background:#05090d;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    color:#66ff99;
+
+    font-family:Consolas, monospace;
+
+}
+
+.mission h1{
+
+    font-size:60px;
+
+    margin-bottom:40px;
+
+    text-shadow:0 0 25px #00ff66;
+
+}
+
+.card{
+
+    width:min(700px,90vw);
+
+    border:1px solid rgba(0,255,120,.3);
+
+    padding:40px;
+
+    background:rgba(0,0,0,.3);
+
+    box-shadow:0 0 25px rgba(0,255,120,.2);
+
+}
+
+.card p{
+
+    font-size:24px;
+
+    margin:18px 0;
+
+}

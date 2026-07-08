@@ -1,47 +1,19 @@
-import './style.css'
+import "./style.css";
 
-document.querySelector('#app').innerHTML = `
-<div class="boot">
+import { BootScreen, startBoot } from "./boot/BootScreen";
+import { bootSequence } from "./boot/BootLoader";
 
-    <div class="title">
-        OPERATION
-        <span>LAST COMMIT</span>
-    </div>
+async function start() {
 
-    <div class="terminal">
-        <div id="terminalText"></div>
-    </div>
+    await bootSequence();
 
-</div>
-`;
+    document.body.classList.add("glitch");
+    await new Promise(r => setTimeout(r, 500));
+    document.body.classList.remove("glitch");
 
-const lines = [
-    "Initializing secure environment...",
-    "Loading Python Intelligence Agency...",
-    "Decrypting mission package...",
-    "Target identified: Jan Kadlec",
-    "Mission date: 16.07.2026 - 19.07.2026",
-    "",
-    "ACCESS GRANTED"
-];
+    document.querySelector("#app").innerHTML = BootScreen();
 
-const terminal = document.getElementById("terminalText");
-
-let line = 0;
-
-function writeLine(){
-
-    if(line >= lines.length) return;
-
-    const div=document.createElement("div");
-    div.textContent="> "+lines[line];
-
-    terminal.appendChild(div);
-
-    line++;
-
-    setTimeout(writeLine,700);
-
+    startBoot();
 }
 
-setTimeout(writeLine,800);
+start();
