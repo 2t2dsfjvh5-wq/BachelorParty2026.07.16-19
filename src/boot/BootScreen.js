@@ -1,6 +1,6 @@
-import { MissionScreen } from "../screens/MissionScreen";
 import "./BootScreen.css";
 import { typeLine } from "./Typewriter.js";
+import { MapScreen, initMap } from "../screens/MapScreen";
 
 export function BootScreen() {
 
@@ -8,34 +8,24 @@ export function BootScreen() {
     <div class="boot">
 
         <div class="logo">
-
             PYTHON INTELLIGENCE AGENCY
-
         </div>
 
         <div class="title">
-
             OPERATION
-
             <span>LAST COMMIT</span>
-
         </div>
 
         <div class="terminal">
-
             <div id="terminalText"></div>
-
         </div>
-        <div class="enterBtn">
 
-    ENTER MISSION
+        <div class="enterBtn">
+            ENTER MISSION
+        </div>
 
     </div>
-
-</div>
-
     `;
-
 }
 
 export function startBoot() {
@@ -58,34 +48,33 @@ export function startBoot() {
 
     async function next() {
 
-    if (i >= lines.length) return;
+        if (i >= lines.length) return;
 
-    const div = document.createElement("div");
+        const div = document.createElement("div");
 
-    div.textContent = "> ";
+        terminal.appendChild(div);
 
-    terminal.appendChild(div);
+        await typeLine(div, "> " + lines[i], 18);
 
-    await typeLine(div, "> " + lines[i], 18);
+        terminal.scrollTop = terminal.scrollHeight;
 
-    terminal.scrollTop = terminal.scrollHeight;
+        i++;
 
-    i++;
+        await new Promise(r => setTimeout(r, 300));
 
-   await new Promise(r => setTimeout(r,300));
-
-next();
-const button = document.querySelector(".enterBtn");
-
-button.addEventListener("click", () => {
-
-    document.querySelector("#app").innerHTML = MissionScreen();
-
-});
-return;
-
+        next();
     }
 
     next();
+
+    const button = document.querySelector(".enterBtn");
+
+    button.addEventListener("click", () => {
+
+        document.querySelector("#app").innerHTML = MapScreen();
+
+        initMap();
+
+    });
 
 }

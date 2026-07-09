@@ -1,0 +1,94 @@
+.map-screen{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    background:#05090d;
+}
+
+.map-header{
+    height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#66ff99;
+    font-size:28px;
+    border-bottom:1px solid rgba(0,255,120,.2);
+}
+
+#map{
+    flex:1;
+    width:100%;
+}
+.map-content{
+    flex:1;
+    display:flex;
+}
+
+#map{
+    flex:3;
+}
+
+.mission-panel{
+    flex:1;
+    background:#081018;
+    border-left:1px solid rgba(0,255,120,.2);
+    padding:25px;
+    color:#66ff99;
+    font-family:monospace;
+}
+
+.mission-panel h2{
+    margin-bottom:25px;
+}
+
+.mission-panel p{
+    margin:18px 0;
+}
+
+.online{
+    margin-top:20px;
+    color:#00ff66;
+    font-weight:bold;
+    animation:pulse 1.5s infinite;
+}@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+.target-marker {
+    width: 18px;
+    height: 18px;
+    background: #00ff66;
+    border-radius: 50%;
+    border: 2px solid #b6ffd0;
+    box-shadow: 0 0 20px #00ff66;
+    animation: radarPulse 1.5s infinite;
+}
+
+@keyframes radarPulse {
+
+    0%{
+        transform:scale(1);
+        box-shadow:0 0 5px #00ff66;
+    }
+
+    70%{
+        transform:scale(1.7);
+        box-shadow:0 0 25px #00ff66;
+    }
+
+    100%{
+        transform:scale(1);
+        box-shadow:0 0 5px #00ff66;
+    }
+
+}
