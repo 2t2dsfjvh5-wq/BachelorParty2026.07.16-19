@@ -41,7 +41,7 @@ var e=Object.create,t=Object.defineProperty,n=Object.getOwnPropertyDescriptor,r=
             <li>🍺 Večeře</li>
             <li>🥾 Pátek – Túra</li>
             <li>🍺 Večer – Hospoda</li>
-            <li>🥾 Sobota – Túra</li>
+            <li>🥾 Sobota – Túra2</li>
             <li>🍺 Večer – Hospoda</li>
             <li>🏠 Neděle – Návrat</li>
         </ul>
