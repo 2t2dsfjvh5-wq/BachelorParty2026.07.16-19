@@ -1,6 +1,6 @@
+import { MapScreen, initMap, startCountdown } from "../screens/MapScreen";
 import "./BootScreen.css";
 import { typeLine } from "./Typewriter.js";
-import { MapScreen, initMap } from "../screens/MapScreen";
 
 export function BootScreen() {
 
@@ -73,7 +73,8 @@ export function startBoot() {
 
         document.querySelector("#app").innerHTML = MapScreen();
 
-        initMap();
+       initMap();
+startCountdown();
 
     });
 
