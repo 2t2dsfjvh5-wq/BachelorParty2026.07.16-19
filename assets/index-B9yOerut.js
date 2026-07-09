@@ -38,9 +38,11 @@ var e=Object.create,t=Object.defineProperty,n=Object.getOwnPropertyDescriptor,r=
         <ul class="plan">
             <li>🚗 Čtvrtek – Odjezd</li>
             <li>🏨 Ubytování</li>
+            <li>🍺 Večeře</li>
             <li>🥾 Pátek – Túra</li>
-            <li>🍺 Pátek večer – Hospoda</li>
-            <li>🏔 Sobota – Ferrata</li>
+            <li>🍺 Večer – Hospoda</li>
+            <li>🥾 Sobota – Túra</li>
+            <li>🍺 Večer – Hospoda</li>
             <li>🏠 Neděle – Návrat</li>
         </ul>
 
